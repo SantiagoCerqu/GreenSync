@@ -50,7 +50,6 @@ def logout():
     pass
 
 
-
 @app.route("/nuevo_lote", methods=["GET", "POST"])
 def nuevo_lote():
     # TODO: Formulario para registrar los lotes
@@ -62,6 +61,6 @@ def nueva_planta():
     pass
 
 @app.route("/evento", methods=["GET", "POST"])
-def nueva_planta():
+def evento():
     # TODO: Registrar eventos
     pass
