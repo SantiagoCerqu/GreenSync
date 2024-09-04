@@ -34,34 +34,34 @@ def index():
 @app.route("/registro", methods=["GET", "POST"])
 def registro():
     # TODO: Registrar Usuario
-    return render_template("registro.html")
+    pass
 
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
     # TODO: login
-    return render_template("registro.html")
+    pass
 
 
 
 @app.route("/logout", methods=["GET", "POST"])
 def logout():
     # TODO: logout
-    return render_template("registro.html")
+    pass
 
 
 
 @app.route("/nuevo_lote", methods=["GET", "POST"])
 def nuevo_lote():
     # TODO: Formulario para registrar los lotes
-    return render_template("registro.html")
+    pass
 
 @app.route("/nueva_planta", methods=["GET", "POST"])
 def nueva_planta():
     # TODO: Formulario para registrar una planta (asignarle un lote)
-    return render_template("registro.html")
+    pass
 
-@app.route("/_planta", methods=["GET", "POST"])
+@app.route("/evento", methods=["GET", "POST"])
 def nueva_planta():
-    # TODO: Formulario para registrar una planta (asignarle un lote)
-    return render_template("registro.html")
+    # TODO: Registrar eventos
+    pass
