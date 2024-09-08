@@ -1,51 +1,54 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Register
+    Index
 {% endblock %}
 
 {% block main %}
 
-    <div>
 
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th class="text-start">Simbolo</th>
-                    <th class="text-start">Nombre</th>
-                    <th class="text-end"># de Acciones</th>
-                    <th class="text-end">Precio</th>
-                    <th class="text-end">TOTAL</th>
-                </tr>
 
-            </thead>
-            <tbody>
-                {% for record in records %}
-                <tr>
-                    <td class="text-start">symbol</td>
-                    <td class="text-start">name</td>
-                    <td class="text-end">shares</td>
-                    <td class="text-end">price</td>
-                    <td class="text-end">stock_total</td>
-                </tr>
-                {% endfor %}
+    <section class="my-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="mb-4">Proyecto de Reforestación del Páramo <strong>El Guerrero</strong></h1>
+                    <p>Este proyecto se enfoca en el desarrollo de un formato de registro para llevar un seguimiento detallado del proceso de <strong>reforestación en el páramo El Guerrero</strong>, utilizando semillas nativas. A través de esta herramienta, buscamos <strong>optimizar el monitoreo de las plantaciones, registrar el crecimiento de las especies y evaluar el impacto en la restauración de la biodiversidad</strong>. El proyecto fomenta la participación comunitaria y la implementación de prácticas de cultivo sostenible, con el objetivo de asegurar la preservación a largo plazo de este ecosistema vital.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="{{ url_for('static', filename='imagenes/Planta.jpg') }}" alt="Imagen del proyecto" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
 
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td class="border-0 fw-bold text-end" colspan="4">Cash</td>
-                    <td class="border-0 text-end">cash</td>
-                </tr>
-                <tr>
-                    <td class="border-0 fw-bold text-end" colspan="4">TOTAL</td>
-                    <td class="border-0 w-bold text-end">TOTAL</td>
-                </tr>
+    <section class="my-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="{{ url_for('static', filename='imagenes/Mision.jpg') }}" alt="Imagen del proyecto" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="mb-4"><strong>Misión</strong></h2>
+                    <p>Desarrollar un formato de registro integral que permita llevar un seguimiento detallado de la plantación y el crecimiento de especies nativas en el páramo <strong>El Guerrero</strong>. A través de esta herramienta, buscamos optimizar el proceso de reforestación, asegurar la sostenibilidad de las técnicas de cultivo y facilitar la participación comunitaria en la preservación del ecosistema, <strong>garantizando el monitoreo efectivo de la biodiversidad</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            </tfoot>
-
-        </table>
-
-    </div>
+    <section class="my-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="mb-4"><strong>Visión</strong></h2>
+                    <p>Ser una plataforma innovadora y eficiente para el <strong>registro y monitoreo de proyectos de reforestación</strong>, contribuyendo a la restauración y protección de los páramos. Aspiramos a que nuestro formato de seguimiento sirva como modelo para otras iniciativas de conservación, fomentando la sostenibilidad, la transparencia en el manejo ambiental y la <strong>colaboración activa en la recuperación de ecosistemas vitales</strong> como el de <strong>El Guerrero</strong>.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="{{ url_for('static', filename='imagenes/Vision.jpeg') }}" alt="Imagen del proyecto" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 {% endblock %}

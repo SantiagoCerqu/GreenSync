@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Nueva Bandeja
+{% endblock %}
+
+{% block main %}
+
+
+    <div class="container mt-5 pt-5">
+        <h1>Registro de nueva bandeja</h1>
+        <br>
+        <form>
+            <div id="bandeja" class="card mb-4">
+                <div class="card-header">
+                    Información de la Bandeja
+                </div>
+                <div class="card-body">
+                    <div class="row">
+
+                        <div class="col-md-4 mb-3">
+                            <label for="id_bandeja" class="form-label">ID Bandeja</label>
+                            <input type="text" class="form-control" id="id_bandeja" placeholder="Identificador único de la bandeja" required>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="ubicacion_bandeja" class="form-label">Ubicación</label>
+                            <input type="text" class="form-control" id="ubicacion_bandeja" placeholder="Ubicación de la bandeja" required>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="id_especie_bandeja" class="form-label">ID Especie</label>
+                            <input type="text" class="form-control" id="id_especie_bandeja" placeholder="ID de la especie" required>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="sustrato" class="form-label">Sustrato</label>
+                            <input type="text" class="form-control" id="sustrato" placeholder="Tipo de sustrato" required>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="humedad_bandeja" class="form-label">Humedad (%)</label>
+                            <input type="number" class="form-control" id="humedad_bandeja" placeholder="Porcentaje de humedad" min="0" max="100" step="0.1" required>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="temperatura_bandeja" class="form-label">Temperatura (°C)</label>
+                            <input type="number" class="form-control" id="temperatura_bandeja" placeholder="Temperatura en °C" required>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="fecha_creacion" class="form-label">Fecha de Creación</label>
+                            <input type="date" class="form-control" id="fecha_creacion" required>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="origen" class="form-label">Origen</label>
+                            <input type="text" class="form-control" id="origen" placeholder="Origen del lote de semillas" required>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="cantidad_semillas" class="form-label">Cantidad de Semillas</label>
+                            <input type="number" class="form-control" id="cantidad_semillas" placeholder="Cantidad de semillas" required>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="nivel_ph" class="form-label">Nivel de pH</label>
+                            <input type="number" class="form-control" id="nivel_ph" placeholder="Nivel de pH" step="0.1" required>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="luminosidad" class="form-label">Luminosidad</label>
+                            <input type="text" class="form-control" id="luminosidad" placeholder="Luminosidad" required>
+                        </div>
+
+                        <div class="col-md-3 mb-1">
+                            <label for="tomar_foto" class="form-label">Asignar el código QR de la bandeja</label>
+                            <button type="button" class="btn btn-info">Escanear QR</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-success">Enviar</button>
+        </form>
+    </div>
+
+
+    {% endblock %}

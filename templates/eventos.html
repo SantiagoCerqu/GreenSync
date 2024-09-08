@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Eventos
+{% endblock %}
+
+{% block main %}
+
+
+    <div class="container mt-5 pt-5">
+        <h1>Registro de Eventos</h1>
+        <br>
+        <form>
+            <div id="crecimiento" class="card mb-4">
+                <div class="card-header">
+                    Información de Crecimiento
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="form-group col-md-4 mb-3">
+                            <label for="id_crecimiento" class="form-label">ID Crecimiento</label>
+                            <input type="text" class="form-control" id="id_crecimiento" placeholder="Identificador único del registro de crecimiento" required>
+                        </div>
+                        <div class="form-group col-md-4 mb-3">
+                            <label for="id_planta_crecimiento" class="form-label">ID Planta</label>
+                            <input type="text" class="form-control" id="id_planta_crecimiento" placeholder="ID de la planta" required>
+                        </div>
+                        <div class="form-group col-md-4 mb-3">
+                            <label for="id_evento" class="form-label">ID Evento</label>
+                            <input type="text" class="form-control" id="id_evento" placeholder="Identificador único del evento" required>
+                        </div>
+                        <div class="form-group col-md-4 mb-3">
+                            <label for="fecha_observacion" class="form-label">Fecha de Observación</label>
+                            <input type="date" class="form-control" id="fecha_observacion" required>
+                        </div>
+                        <div class="form-group col-md-4 mb-3">
+                            <label for="estado_salud" class="form-label">Estado de Salud</label>
+                            <select class="form-select" id="estado_salud" required>
+                                <option value="">Selecciona el estado de salud</option>
+                                <option>Excelente</option>
+                                <option>Buena</option>
+                                <option>Regular</option>
+                                <option>Mala</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4 mb-3">
+                            <label for="tipo_evento" class="form-label">Tipo de Evento</label>
+                            <select class="form-select" id="tipo_evento" required>
+                                <option value="">Selecciona el tipo de evento</option>
+                                <option>Riego</option>
+                                <option>Fertilización</option>
+                                <option>Trasplante</option>
+                                <option>Poda</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4 mb-3">
+                            <label for="altura" class="form-label">Altura (cm)</label>
+                            <input type="number" class="form-control" id="altura" placeholder="Altura en cm" min="0">
+                        </div>
+                        <div class="form-group col-md-4 mb-3">
+                            <label for="diametro" class="form-label">Diámetro (cm)</label>
+                            <input type="number" class="form-control" id="diametro" placeholder="Diámetro del tallo en cm" min="0">
+                        </div>
+                        <div class="form-group col-md-4 mb-3">
+                            <label for="frecuencia_evento" class="form-label">Frecuencia del Evento</label>
+                            <input type="text" class="form-control" id="frecuencia_evento" placeholder="Frecuencia en días o semanas">
+                        </div>
+                        <div class="form-group col-md-4 mb-3">
+                            <label for="observaciones_crecimiento" class="form-label">Observaciones</label>
+                            <textarea class="form-control" id="observaciones_crecimiento" rows="1" placeholder="Notas adicionales"></textarea>
+                        </div>
+                        <div class="form-group col-md-4 mb-3">
+                            <label for="responsable_evento" class="form-label">Responsable</label>
+                            <input type="text" class="form-control" id="responsable_evento" placeholder="Nombre del responsable">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success">Enviar</button>
+        </form>
+
+
+    </div>
+
+{% endblock %}

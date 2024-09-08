@@ -1,0 +1,118 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Nueva Planta
+{% endblock %}
+
+{% block main %}
+
+    <div class="container mt-5 pt-5">
+        <h1 class="mb-4">Registro de nueva planta</h1>
+        <br>
+        <form>
+            <div id="planta" class="card mb-4">
+                <div class="card-header">
+                    Información de la Planta
+                </div>
+                <div class="card-body">
+                    <div class="row">
+
+                        <div class="col-md-4 mb-3">
+                            <label for="id_planta" class="form-label">ID Planta</label>
+                            <input type="text" class="form-control" id="id_planta" placeholder="Identificador único de la planta" required>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="id_bandeja_planta" class="form-label">ID Bandeja</label>
+                            <input type="text" class="form-control" id="id_bandeja_planta" placeholder="ID de la bandeja">
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="id_especie_planta" class="form-label">ID Especie</label>
+                            <input type="text" class="form-control" id="id_especie_planta" placeholder="ID de la especie">
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="fecha_trasplante" class="form-label">Fecha de Trasplante</label>
+                            <input type="date" class="form-control" id="fecha_trasplante">
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="ubicacion_planta" class="form-label">Ubicación</label>
+                            <input type="text" class="form-control" id="ubicacion_planta" placeholder="Ubicación actual de la planta">
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="humedad_planta" class="form-label">Humedad (%)</label>
+                            <input type="number" class="form-control" id="humedad_planta" placeholder="Nivel de humedad" min="0" max="100" required>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="temperatura_planta" class="form-label">Temperatura (°C)</label>
+                            <input type="number" class="form-control" id="temperatura_planta" placeholder="Temperatura en °C" required>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="sustrato_planta" class="form-label">Sustrato</label>
+                            <input type="text" class="form-control" id="sustrato_planta" placeholder="Tipo de sustrato">
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="estado_planta" class="form-label">Estado</label>
+                            <select class="form-select" id="estado_planta" required>
+                                <option value="">Selecciona el estado</option>
+                                <option value="plántula">Plántula</option>
+                                <option value="joven">Joven</option>
+                                <option value="madura">Madura</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="numero_hojas" class="form-label">Número de Hojas</label>
+                            <input type="number" class="form-control" id="numero_hojas" placeholder="Número de hojas">
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="tamano_hoja" class="form-label">Tamaño de Hoja</label>
+                            <input type="text" class="form-control" id="tamano_hoja" placeholder="Tamaño de hoja">
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="tasa_crecimiento" class="form-label">Tasa de Crecimiento</label>
+                            <input type="text" class="form-control" id="tasa_crecimiento" placeholder="Tasa de crecimiento">
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="observaciones_planta" class="form-label">Observaciones</label>
+                            <textarea class="form-control" id="observaciones_planta" rows="1" placeholder="Notas adicionales"></textarea>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="nombre_comun" class="form-label">Nombre común</label>
+                            <select class="form-select" id="nombre_comun" required>
+                                <option value="">Selecciona un nombre</option>
+                                <option value="amarguero">Amarguero o amargoso</option>
+                                <option value="encenillo">Encenillo</option>
+                                <option value="lauerel_cera">Lauerel de cera</option>
+                                <option value="olivo_salvio">Olivo o Salvio</option>
+                                <option value="raque">Raque o Campano</option>
+                                <option value="rodamonte">Rodamonte</option>
+                                <option value="tibar">Tibar</option>
+                                <option value="yagual">Yagual</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-3 mb-1">
+                            <label for="tomar_foto" class="form-label">Asignar el código QR de la planta</label>
+                            <button type="button" class="btn btn-info">Escanear QR</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-success">Enviar</button>
+        </form>
+    </div>
+
+{% endblock %}

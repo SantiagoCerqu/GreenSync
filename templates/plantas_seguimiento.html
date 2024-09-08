@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Seguimiento Plantas
+{% endblock %}
+
+{% block main %}
+
+<div class="container mt-5">
+    <h1 class="mb-4">Seguimiento de las plantas</h1>
+    <br>
+    <form action="{{ url_for('buscar_plantas')}}" method="GET">
+        <div id="seguimientoplantas" class="card mb-4"> 
+            <div class="card-header">
+                Puedes ingresar el <strong>ID</strong> o el <strong>QR</strong> de la planta
+            </div>
+            <div class="card-body">
+                <div class="row">
+        
+        <div class="col-md-3 mb-1">
+            <label for="filtro_plantas" class="form-label">Filtrar por ID de Planta</label>
+            <input type="text" class="form-control" name="filtro_plantas" id="filtro_plantas" placeholder="Introduce el ID de la bandeja para buscar">
+        </div>
+
+        <div class="col-md-3 mb-1">
+            <label for="tomar_foto" class="form-label">Escanea el código QR de la Planta</label>
+            <button type="button" class="btn btn-info">Escanear QR</button>
+        </div>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success">Buscar</button>
+    </form>
+    <hr>
+
+    <div class="container">
+        <h2 class="mt-5">Datos Plantas</h2>
+        {% if respuesta %}
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    {% for key in respuesta.keys() %}
+                    <th>{{ key }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+
+            <tbody>
+                
+                <tr>
+                    {% for item in respuesta.values() %}
+                    <td>{{ item }}</td>
+                    {% endfor %}
+                </tr>
+               
+            </tbody>
+          
+        </table>
+        {% else %}
+        <p>No hay datos para mostrar.</p>
+        {% endif %}
+
+        {% if respuesta2 %}
+        <h3 class="mt-5">Registro de eventos de la bandeja: </h3>
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    {% for header in headers %}
+                        <th>{{ header }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+
+            <tbody>
+
+                {% for evento in respuesta2 %}
+
+                    <tr>
+                        {% for item in evento %}                    
+                            <td>{{ evento[item] }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+               
+            </tbody>
+          
+        </table>
+
+
+        {% endif %}
+    </div>
+
+</div>
+
+
+{% endblock %}

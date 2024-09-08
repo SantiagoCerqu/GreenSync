@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Seguimiento Bandejas
+{% endblock %}
+
+{% block main %}
+
+<div class="container mt-5">
+    <h1 class="mb-4">Descripcion de la bandejas</h1>
+    <br>
+    <form action="{{ url_for('buscar_bandeja')}}" method="GET">
+        <div id="seguimientobandeja" class="card mb-4"> 
+            <div class="card-header">
+                Puedes ingresar el <strong>ID</strong> o el <strong>QR</strong> de la bandeja
+            </div>
+            <div class="card-body">
+                <div class="row">
+        
+        <div class="col-md-3 mb-1">
+            <label for="filtro_bandeja" class="form-label">Filtrar por ID de Bandeja</label>
+            <input type="text" class="form-control" name="filtro_bandeja" id="filtro_bandeja" placeholder="Introduce el ID de la bandeja para buscar">
+
+        </div>
+
+        <div class="col-md-3 mb-1">
+            <label for="tomar_foto" class="form-label">Escanea el código QR de la Bandeja</label>
+            <button type="button" class="btn btn-info">Escanear QR</button>
+        </div>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success">Buscar</button>
+    </form>
+    <hr>
+
+    <div class="container">
+        {% if respuesta %}
+        <h2 class="mt-5">Datos Bandeja: {{ respuesta["codigo_qr"] }}</h2>
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    {% for key in respuesta.keys() %}
+                    <th>{{ key }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+
+            <tbody>
+                
+                <tr>
+                    {% for item in respuesta.values() %}
+                    <td>{{ item }}</td>
+                    {% endfor %}
+                </tr>
+               
+            </tbody>
+          
+        </table>
+        {% else %}
+        <p>No hay datos para mostrar.</p>
+        {% endif %}
+
+        {% if respuesta2 %}
+        <h3 class="mt-5">Registro de eventos de la bandeja: </h3>
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    {% for header in headers %}
+                        <th>{{ header }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+
+            <tbody>
+
+                {% for evento in respuesta2 %}
+
+                    <tr>
+                        {% for item in evento %}                    
+                            <td>{{ evento[item] }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+               
+            </tbody>
+          
+        </table>
+
+
+        {% endif %}
+    </div>
+
+
+    <div class="container">
+        
+    </div>
+
+
+{% endblock %}

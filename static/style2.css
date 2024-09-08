@@ -1,0 +1,35 @@
+@import url('https://fonts.cdnfonts.com/css/urw-geometric');
+
+body{
+    font-family: 'URW Geometric', sans-serif;
+    background: #F2F2F2;
+}
+
+/* Contendedor Login */
+.box-area{
+    width: 930px;
+}
+
+/* Caja Derecha */
+
+.right-box{
+    padding: 40px 30px 40px 40px;
+}
+
+/*------------ Custom Placeholder ------------*/
+
+::placeholder{
+    font-size: 16px;
+}
+
+.rounded-4{
+    border-radius: 20px;
+}
+.rounded-5{
+    border-radius: 30px;
+}
+
+.custom-btn {
+    background-color: #668C4A; 
+    color: white; 
+}

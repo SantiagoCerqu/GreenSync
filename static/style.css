@@ -1,0 +1,41 @@
+@import url('https://fonts.cdnfonts.com/css/urw-geometric');
+
+body{
+    font-family: 'URW Geometric', sans-serif;
+    background: #000000;
+    padding-top: 56px; 
+}
+
+.card-header {
+    background-color: #f8f9fa;
+}
+
+.container {
+    padding-top: 70px; 
+}
+
+.img-fluid {
+    max-height: 400px; 
+    object-fit: cover; 
+}
+
+.navbar-custom {
+    background-color: #668C4A;
+}
+
+.navbar-custom .navbar-brand {
+    color: white; 
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-custom .navbar-toggler {
+    border-color: white;
+}
+
+.navbar-brand:hover, .navbar-nav .nav-link:hover {
+    color: #d4edda;
+}
+
