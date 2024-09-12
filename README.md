@@ -34,3 +34,25 @@ Este proyecto es una aplicación web diseñada para la gestión y monitoreo del 
     python app.py
 
 6. Abre tu navegador web y accede a http://localhost:5000 para ver la aplicación en acción.
+
+
+## Imágenes
+
+![Logo](static\imagenes\logo_blanco.png)
+
+
+![...](imagenes_presentacion\banner.jpeg)
+
+![...](imagenes_presentacion\login.PNG)
+
+![...](imagenes_presentacion\interfaz.PNG)
+
+![...](imagenes_presentacion\formularios.PNG)
+
+![...](imagenes_presentacion\funcionalidad.PNG)
+
+![...](imagenes_presentacion\visualizacon.PNG)
+
+![...](imagenes_presentacion\responsive.PNG)
+
+![...](imagenes_presentacion\responsive2.PNG)
