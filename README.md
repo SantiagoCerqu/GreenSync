@@ -41,18 +41,18 @@ Este proyecto es una aplicación web diseñada para la gestión y monitoreo del 
 ![Logo](static\imagenes\logo_blanco.png)
 
 
-![...](imagenes_presentacion\banner.jpeg)
+![banner](imagenes_presentacion\banner.jpeg)
 
-![...](imagenes_presentacion\login.PNG)
+![login](imagenes_presentacion\login.PNG)
 
-![...](imagenes_presentacion\interfaz.PNG)
+![interfaz](imagenes_presentacion\interfaz.PNG)
 
-![...](imagenes_presentacion\formularios.PNG)
+![formularios](imagenes_presentacion\formularios.PNG)
 
-![...](imagenes_presentacion\funcionalidad.PNG)
+![funcionalidad](imagenes_presentacion\funcionalidad.PNG)
 
-![...](imagenes_presentacion\visualizacon.PNG)
+![visualizacon](imagenes_presentacion\visualizacon.PNG)
 
-![...](imagenes_presentacion\responsive.PNG)
+![responsive](imagenes_presentacion\responsive.PNG)
 
-![...](imagenes_presentacion\responsive2.PNG)
+![responsive2](imagenes_presentacion\responsive2.PNG)
