@@ -38,7 +38,7 @@ Este proyecto es una aplicación web diseñada para la gestión y monitoreo del 
 
 ## Imágenes
 
-![Logo](static/imagenes/logo_blanco.txt)
+![Logo](static/imagenes/logo_blanco.png)
 
 ![banner](imagenes_presentacion/banner.jpeg)
 
